@@ -66,11 +66,11 @@ export function HowItWorks() {
               <TabsTrigger value="customers">For Customers (B2C)</TabsTrigger>
             </TabsList>
             <TabsContent value="retailers">
-              <div className="mt-10 grid gap-8 md:gap-12">
+              <div className="mt-10 grid gap-8 md:grid-cols-1 lg:grid-cols-3 lg:gap-12">
                 {b2bSteps.map((step, index) => (
-                  <Card key={step.step} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
-                    <div className="grid md:grid-cols-2">
-                      <div className={`flex flex-col justify-center p-6 md:p-8 ${index % 2 !== 0 ? 'md:order-last' : ''}`}>
+                  <Card key={step.step} className="flex flex-col overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
+                    <div className="flex flex-col flex-1">
+                      <div className="flex-1 p-6 md:p-8">
                         <CardHeader>
                           <div className="flex items-center gap-4">
                              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-xl">{step.step}</div>
@@ -84,7 +84,7 @@ export function HowItWorks() {
                         </CardContent>
                       </div>
                       {step.image && (
-                        <div className="relative h-64 md:h-full min-h-[300px]">
+                        <div className="relative h-64 mt-auto">
                           <Image
                             src={step.image.imageUrl}
                             alt={step.description}
@@ -100,11 +100,11 @@ export function HowItWorks() {
               </div>
             </TabsContent>
             <TabsContent value="customers">
-            <div className="mt-10 grid gap-8 md:gap-12">
+            <div className="mt-10 grid gap-8 md:grid-cols-1 lg:grid-cols-3 lg:gap-12">
                 {b2cSteps.map((step, index) => (
-                  <Card key={step.step} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
-                    <div className="grid md:grid-cols-2">
-                    <div className={`flex flex-col justify-center p-6 md:p-8 ${index % 2 !== 0 ? 'md:order-last' : ''}`}>
+                  <Card key={step.step} className="flex flex-col overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
+                    <div className="flex flex-col flex-1">
+                      <div className="flex-1 p-6 md:p-8">
                         <CardHeader>
                           <div className="flex items-center gap-4">
                              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-xl">{step.step}</div>
@@ -118,7 +118,7 @@ export function HowItWorks() {
                         </CardContent>
                       </div>
                       {step.image && (
-                        <div className="relative h-64 md:h-full min-h-[300px]">
+                        <div className="relative h-64 mt-auto">
                           <Image
                             src={step.image.imageUrl}
                             alt={step.description}
