@@ -66,7 +66,7 @@ export function HowItWorks() {
               <TabsTrigger value="customers">For Customers (B2C)</TabsTrigger>
             </TabsList>
             <TabsContent value="retailers">
-              <div className="mt-10 grid gap-8 md:grid-cols-1 lg:grid-cols-3 lg:gap-12">
+              <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
                 {b2bSteps.map((step, index) => (
                   <Card key={step.step} className="flex flex-col overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
                     <div className="flex flex-col flex-1">
@@ -100,7 +100,7 @@ export function HowItWorks() {
               </div>
             </TabsContent>
             <TabsContent value="customers">
-            <div className="mt-10 grid gap-8 md:grid-cols-1 lg:grid-cols-3 lg:gap-12">
+            <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
                 {b2cSteps.map((step, index) => (
                   <Card key={step.step} className="flex flex-col overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
                     <div className="flex flex-col flex-1">
