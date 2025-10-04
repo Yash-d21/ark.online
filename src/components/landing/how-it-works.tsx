@@ -7,20 +7,20 @@ import { Badge } from "@/components/ui/badge";
 const b2bSteps = [
   {
     step: 1,
-    title: "Retailer Onboarding",
-    description: "A retailer partners with ARK by providing their business information, which is then verified, and becomes a partner store.",
+    title: "Sign Up & Order",
+    description: "Retailers sign up via the ARK B2B app and place bulk orders for their products at the lowest price.",
     image: PlaceHolderImages.find(p => p.id === 'retailer-onboarding'),
   },
   {
     step: 2,
-    title: "Product Cataloging",
-    description: "Retailers can add and manage their products. Our AI tools help categorize products and suggest relevant items to increase discoverability.",
-    image: PlaceHolderImages.find(p => p.id === 'product-catalog'),
+    title: "Same-Day Delivery",
+    description: "ARK delivers the goods to your store on the same day, ensuring you're always stocked.",
+    image: PlaceHolderImages.find(p => p.id === 'order-delivery'),
   },
   {
     step: 3,
-    title: "Order Fulfillment",
-    description: "Receive B2B and B2C orders, manage them in real-time and get them delivered with our hyperlocal delivery network.",
+    title: "Fulfill Customer Orders",
+    description: "Receive B2C orders from the ARK app at 0% commission and increase your sales.",
     image: PlaceHolderImages.find(p => p.id === 'order-fulfillment'),
   },
 ];
@@ -28,20 +28,20 @@ const b2bSteps = [
 const b2cSteps = [
   {
     step: 1,
-    title: "Wide Range of Products",
-    description: "Browse through millions of hardware and building materials products from various brands.",
-    image: PlaceHolderImages.find(p => p.id === 'browse-products'),
-  },
-  {
-    step: 2,
-    title: "Place Order",
-    description: "Order from our app at the lowest price from the comfort of your home.",
+    title: "Place an Order",
+    description: "Customers place an order for any hardware or building material product via the ARK B2C app.",
     image: PlaceHolderImages.find(p => p.id === 'customer-order'),
   },
   {
+    step: 2,
+    title: "Order Redirected",
+    description: "The order is automatically redirected to the nearest retail store partnered with ARK.",
+    image: PlaceHolderImages.find(p => p.id === 'product-catalog'),
+  },
+  {
     step: 3,
-    title: "Get it Delivered",
-    description: "Have it delivered to you almost instantly without any hassle.",
+    title: "Instant Delivery",
+    description: "The order is then picked up by ARK's delivery network and delivered to the customer almost instantly.",
     image: PlaceHolderImages.find(p => p.id === 'order-delivery'),
   },
 ];
