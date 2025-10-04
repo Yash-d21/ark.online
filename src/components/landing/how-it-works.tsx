@@ -67,7 +67,7 @@ export function HowItWorks() {
             </TabsList>
             <TabsContent value="retailers">
               <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
-                {b2bSteps.map((step, index) => (
+                {b2bSteps.map((step) => (
                   <Card key={step.step} className="flex flex-col overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
                     <div className="flex flex-col flex-1">
                       <div className="flex-1 p-6 md:p-8">
@@ -101,7 +101,7 @@ export function HowItWorks() {
             </TabsContent>
             <TabsContent value="customers">
             <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
-                {b2cSteps.map((step, index) => (
+                {b2cSteps.map((step) => (
                   <Card key={step.step} className="flex flex-col overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
                     <div className="flex flex-col flex-1">
                       <div className="flex-1 p-6 md:p-8">
