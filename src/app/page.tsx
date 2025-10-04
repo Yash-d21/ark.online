@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/landing/hero";
+import { InfoSection } from "@/components/landing/info-section";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { WhyArk } from "@/components/landing/why-ark";
 import { CtaSection } from "@/components/landing/cta-section";
@@ -16,6 +17,7 @@ export default function Home() {
         <section className="relative bg-background" style={{ height: '150px', position: 'relative' }}>
           <FlowingMenu />
         </section>
+        <InfoSection />
         <HowItWorks />
         <WhyArk />
         <CtaSection />
