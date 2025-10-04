@@ -12,7 +12,7 @@ export function Footer() {
            <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="hidden md:inline">|</span>
                 <span>Incubated with</span>
-                <Image src="/images/thub-logo.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
+                <Image src="https://i.ibb.co/3fd2y38/T-Hub-Logo-PNG.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
             </div>
         </div>
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">

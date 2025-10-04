@@ -82,7 +82,7 @@ export default function FlowingMenu() {
   const item = {
     link: '#',
     text: 'Incubated with',
-    image: '/images/thub-logo.png'
+    image: 'https://i.ibb.co/3fd2y38/T-Hub-Logo-PNG.png'
   };
 
   return (
