@@ -48,54 +48,42 @@ const b2cSteps = [
     },
 ]
 
-const Roadmap = ({ steps }: { steps: Array<{title: string, description: string, icon: JSX.Element}> }) => {
+const RoadmapB2B = () => {
     return (
-        <div className="relative">
-             <div className="flex flex-col items-center justify-center md:items-stretch">
-                {steps.map((step, index) => (
-                    <div key={index} className="flex flex-col md:flex-row items-center justify-center my-8 md:my-0">
-                        {/* Step content */}
-                        <div className={`flex flex-col md:flex-row items-center w-full ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                            <div className="flex-1 flex flex-col items-center">
-                                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-card border-2 border-primary/50 shadow-lg z-10">
-                                    {step.icon}
-                                </div>
-                                <div className="mt-4 text-center md:px-8">
-                                    <h3 className="font-headline text-lg font-semibold text-foreground">{step.title}</h3>
-                                    <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
-                                </div>
-                            </div>
-                            <div className="flex-1 hidden md:block"></div>
+        <div className="flex flex-col items-center justify-center gap-8">
+            {/* First Row */}
+            <div className="flex flex-col md:flex-row items-stretch justify-center gap-8">
+                {b2bSteps.slice(0, 3).map((step, index) => (
+                    <div key={index} className="flex flex-col items-center text-center max-w-xs">
+                        <div className="flex items-center justify-center w-24 h-24 rounded-full bg-card border-2 border-primary/50 shadow-lg z-10">
+                            {step.icon}
                         </div>
-
-                        {/* Connector for mobile */}
-                        {index < steps.length - 1 && (
-                            <div className="flex-shrink-0 md:hidden my-4">
-                                <ArrowDown className="h-8 w-8 text-primary/50" />
-                            </div>
-                        )}
-                        
-                        {/* Connector for desktop */}
-                        {index < steps.length - 1 && (
-                             <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-border">
-                                <svg width="100%" height="100%" className="absolute" style={{top: `calc(${index * 19.5}rem + 6rem)`}}>
-                                    <path 
-                                        d={index % 2 === 0 ? "M 0 0 V 100 H 200 V 200" : "M 200 0 V 100 H 0 V 200"}
-                                        stroke="hsl(var(--primary) / 0.5)" 
-                                        strokeWidth="2" 
-                                        fill="none" 
-                                        strokeDasharray="8 8" 
-                                        transform={index % 2 === 0 ? "translate(0, 0)" : "translate(-199, 0)"}
-                                    />
-                                </svg>
-                            </div>
-                        )}
+                        <div className="mt-4">
+                            <h3 className="font-headline text-lg font-semibold text-foreground">{step.title}</h3>
+                            <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+             <ArrowDown className="h-8 w-8 text-primary/50" />
+            {/* Second Row */}
+            <div className="flex flex-col md:flex-row items-stretch justify-center gap-8">
+                {b2bSteps.slice(3).map((step, index) => (
+                     <div key={index} className="flex flex-col items-center text-center max-w-xs">
+                        <div className="flex items-center justify-center w-24 h-24 rounded-full bg-card border-2 border-primary/50 shadow-lg z-10">
+                            {step.icon}
+                        </div>
+                        <div className="mt-4">
+                            <h3 className="font-headline text-lg font-semibold text-foreground">{step.title}</h3>
+                            <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
+                        </div>
                     </div>
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
+
 
 export function HowItWorks() {
     return (
@@ -114,7 +102,7 @@ export function HowItWorks() {
                         <TabsTrigger value="b2c">For Customers (B2C)</TabsTrigger>
                     </TabsList>
                     <TabsContent value="b2b" className="mt-16">
-                        <Roadmap steps={b2bSteps} />
+                        <RoadmapB2B />
                     </TabsContent>
                     <TabsContent value="b2c" className="mt-10">
                          <div className="relative">
