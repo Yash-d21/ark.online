@@ -1,9 +1,10 @@
 
+@import './FlowingMenu.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import './FlowingMenu.css';
 
 @layer base {
   :root {
