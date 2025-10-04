@@ -5,6 +5,14 @@ export function InfoSection() {
   return (
     <section id="info" className="py-20 md:py-28 bg-card">
       <div className="container mx-auto max-w-7xl px-4">
+        <div className="mx-auto max-w-3xl text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Built for Everyone in the Supply Chain
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+                Whether you're a retailer looking to grow or a customer seeking convenience, ARK has you covered.
+            </p>
+        </div>
         <div className="grid gap-8 md:grid-cols-2">
           <Card className="text-center shadow-lg">
             <CardHeader>
