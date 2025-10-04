@@ -3,9 +3,9 @@ import { CheckCircle2 } from "lucide-react";
 
 export function InfoSection() {
   return (
-    <section id="info" className="py-20 md:py-28 bg-card">
+    <section id="info" className="py-10 md:py-14 bg-card">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="mx-auto max-w-3xl text-center mb-12">
+        <div className="mx-auto max-w-3xl text-center mb-8">
             <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Built for Everyone in the Supply Chain
             </h2>
