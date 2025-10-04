@@ -21,7 +21,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <section className="relative bg-background" style={{ height: '600px', position: 'relative' }}>
-          <FlowingMenu items={demoItems} />
+          <FlowingMenu />
         </section>
         <HowItWorks />
         <WhyArk />

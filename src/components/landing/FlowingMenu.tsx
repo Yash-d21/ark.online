@@ -2,10 +2,6 @@
 import React from 'react';
 import { gsap } from 'gsap';
 
-type FlowingMenuProps = {
-    items: { link: string; text: string; image: string }[];
-};
-
 type MenuItemProps = {
     link: string;
     text: string;
@@ -82,17 +78,17 @@ function MenuItem({ link, text, image }: MenuItemProps) {
 }
 
 
-export default function FlowingMenu({ items = [] }: FlowingMenuProps) {
+export default function FlowingMenu() {
+  const item = {
+    link: '#',
+    text: 'Incubated with',
+    image: '/images/thub-logo.png'
+  };
+
   return (
     <div className="menu-wrap">
-      <div className="flex justify-center items-center gap-4 mb-8 text-center absolute top-8 left-1/2 -translate-x-1/2 z-10">
-          <h3 className="text-lg text-muted-foreground font-semibold">Incubated with</h3>
-          <img src="/images/thub-logo.png" alt="T-Hub Logo" width={80} height={80} className="object-contain" />
-      </div>
-      <nav className="menu">
-        {items.map((item, idx) => (
-          <MenuItem key={idx} {...item} />
-        ))}
+      <nav className="menu" style={{height: '25%', top: '50%', transform: 'translateY(-50%)', position: 'relative'}}>
+          <MenuItem {...item} />
       </nav>
     </div>
   );
