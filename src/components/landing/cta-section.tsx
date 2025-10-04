@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function CtaSection() {
     return (
@@ -17,9 +18,11 @@ export function CtaSection() {
                             <CardTitle className="font-headline text-xl">Are you ready to take your business to the next level?</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <Button size="lg" className="w-full sm:w-auto">
-                                Grow Now!
-                                <ArrowRight className="ml-2 h-4 w-4" />
+                            <Button size="lg" className="w-full sm:w-auto" asChild>
+                                <Link href="https://forms.gle/BW2q6X93evCi51Ga9" target="_blank" rel="noopener noreferrer">
+                                    Grow Now!
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -28,9 +31,11 @@ export function CtaSection() {
                             <CardTitle className="font-headline text-xl">Ready to browse through millions of our products?</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90">
-                                Shop Now!
-                                <ArrowRight className="ml-2 h-4 w-4" />
+                            <Button size="lg" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90" asChild>
+                                <Link href="https://forms.gle/BW2q6X93evCi51Ga9" target="_blank" rel="noopener noreferrer">
+                                    Shop Now!
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
                             </Button>
                         </CardContent>
                     </Card>

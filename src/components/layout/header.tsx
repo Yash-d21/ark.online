@@ -52,7 +52,7 @@ export function Header() {
 
         <div className="hidden items-center gap-2 md:flex">
           <Button asChild>
-            <Link href="#contact">Get Started</Link>
+            <Link href="https://forms.gle/BW2q6X93evCi51Ga9" target="_blank" rel="noopener noreferrer">Get Started</Link>
           </Button>
         </div>
 
@@ -94,7 +94,7 @@ export function Header() {
               </nav>
               <div className="mt-auto flex flex-col gap-2">
                 <Button size="lg" asChild onClick={() => setIsOpen(false)}>
-                  <Link href="#contact">Get Started</Link>
+                  <Link href="https://forms.gle/BW2q6X93evCi51Ga9" target="_blank" rel="noopener noreferrer">Get Started</Link>
                 </Button>
               </div>
             </div>
