@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "indian-store-owner",
+      "description": "A portrait of an Indian hardware store owner.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1571367034861-e6729ad9c2d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBtYW58ZW58MHx8fHwxNzU5NjA1ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Indian man"
+    },
+    {
+      "id": "customer-order",
+      "description": "Customer placing an order on a smartphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1616332012084-9ac36f0a7b3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGhvbmUlMjBvcmRlcnxlbnwwfHx8fDE3NTk2MDU4MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone order"
+    },
+    {
+      "id": "order-redirect",
+      "description": "An order being redirected to the nearest store on a map.",
+      "imageUrl": "https://images.unsplash.com/photo-1736117704452-46670dd0c81f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXAlMjBsb2NhdGlvbnxlbnwwfHx8fDE3NTk1MDk2MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map location"
+    },
+    {
+      "id": "order-delivery",
+      "description": "A delivery truck on its way.",
+      "imageUrl": "https://images.unsplash.com/photo-1587813369290-091c9d432daf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZWxpdmVyeSUyMHRydWNrfGVufDB8fHx8MTc1OTU5ODczMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "delivery truck"
+    }
+  ]
 }
