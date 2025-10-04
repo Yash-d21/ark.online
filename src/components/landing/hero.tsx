@@ -1,9 +1,19 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
   return (
-    <section id="home" className="relative w-full py-20 md:py-32 lg:py-40 bg-card">
+    <section id="home" className="relative w-full py-20 md:py-32 lg:py-40 bg-card isolate">
+      <div className="absolute inset-0 -z-10 h-full w-full">
+        <Image
+          src="https://picsum.photos/seed/ark-hero/1920/1080"
+          alt="Hardware supplies background"
+          fill
+          className="object-cover opacity-20"
+          data-ai-hint="hardware supplies"
+        />
+      </div>
       <div className="container mx-auto max-w-7xl px-4 text-center">
         <div className="mx-auto max-w-4xl">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl lg:text-7xl">
