@@ -74,7 +74,7 @@ const RoadmapB2B = () => {
             </div>
 
             <div className="flex justify-end w-full max-w-5xl px-12">
-                 <ArrowDown className="h-12 w-12 text-primary/50 -rotate-45" />
+                 <ArrowDown className="h-12 w-12 text-primary/50" />
             </div>
             
             {/* Second Row */}
