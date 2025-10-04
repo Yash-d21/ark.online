@@ -1,17 +1,15 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, ShoppingCart } from "lucide-react";
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 
 export function InfoSection() {
-    const tHubLogo = PlaceHolderImages.find(p => p.id === 'thub-logo');
     return (
         <section className="py-20 md:py-28">
             <div className="container mx-auto max-w-7xl px-4">
                 <div className="flex justify-center items-center gap-4 mb-16 text-center">
                     <h3 className="text-lg text-muted-foreground font-semibold">Incubated with</h3>
-                    {tHubLogo && <Image src={tHubLogo.imageUrl} alt="T-Hub Logo" width={80} height={80} className="object-contain" />}
+                    <Image src="/images/thub-logo.png" alt="T-Hub Logo" width={80} height={80} className="object-contain" />
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-2">

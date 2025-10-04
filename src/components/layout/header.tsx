@@ -7,7 +7,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -19,7 +18,6 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
-  const tHubLogo = PlaceHolderImages.find(p => p.id === 'thub-logo');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -33,7 +31,7 @@ export function Header() {
             <div className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
                 <span>|</span>
                 <span>Incubated with</span>
-                {tHubLogo && <Image src={tHubLogo.imageUrl} alt="T-Hub Logo" width={40} height={40} className="object-contain" />}
+                <Image src="/images/thub-logo.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
             </div>
         </div>
 
@@ -78,7 +76,7 @@ export function Header() {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 px-2">
                 <span>Incubated with</span>
-                {tHubLogo && <Image src={tHubLogo.imageUrl} alt="T-Hub Logo" width={30} height={30} className="object-contain" />}
+                <Image src="/images/thub-logo.png" alt="T-Hub Logo" width={30} height={30} className="object-contain" />
               </div>
               <nav className="flex flex-1 flex-col gap-6 pt-8">
                 {navLinks.map((link) => (

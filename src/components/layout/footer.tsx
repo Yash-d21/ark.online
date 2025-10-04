@@ -1,10 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Footer() {
-  const tHubLogo = PlaceHolderImages.find(p => p.id === 'thub-logo');
-
   return (
     <footer className="w-full border-t bg-card">
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
@@ -15,7 +12,7 @@ export function Footer() {
            <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="hidden md:inline">|</span>
                 <span>Incubated with</span>
-                {tHubLogo && <Image src={tHubLogo.imageUrl} alt="T-Hub Logo" width={40} height={40} className="object-contain" />}
+                <Image src="/images/thub-logo.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
             </div>
         </div>
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
