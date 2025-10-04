@@ -11,18 +11,20 @@ const missionPoints = [
 
 export function MissionVision() {
     return (
-        <section id="mission" className="bg-card py-20 md:py-28">
-            <div className="container mx-auto max-w-7xl px-4 space-y-16">
+        <section id="mission" className="py-20 md:py-28">
+            <div className="container mx-auto max-w-7xl px-4 space-y-12">
                 <div className="text-center">
                     <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">
                         ARK! Empowering INDIA, One Retailer at a time!
                     </h2>
                 </div>
 
-                <div className="grid gap-12 lg:grid-cols-5">
-                    <div className="lg:col-span-3">
-                        <h3 className="font-headline text-2xl font-bold text-foreground">Our Mission</h3>
-                        <div className="mt-6 space-y-4">
+                <Card className="shadow-lg">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-2xl">Our Mission</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="space-y-4">
                             {missionPoints.map((point, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <Check className="h-5 w-5 mt-1 flex-shrink-0 text-primary" />
@@ -30,20 +32,8 @@ export function MissionVision() {
                                 </div>
                             ))}
                         </div>
-                    </div>
-                    <div className="lg:col-span-2">
-                        <Card className="h-full shadow-lg">
-                            <CardHeader>
-                                <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-muted-foreground">
-                                    To become a platform that empowers 1,00,000+ retailers, handles ₹3,000+ Cr in annual transactions, and becomes the go-to network for hardware procurement and delivery across India.
-                                </p>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
+                    </CardContent>
+                </Card>
             </div>
         </section>
     );

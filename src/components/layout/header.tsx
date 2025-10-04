@@ -3,10 +3,11 @@
 import * as React from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -18,15 +19,24 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const tHubLogo = PlaceHolderImages.find(p => p.id === 'thub-logo');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center justify-between">
-        <Link href="#" className="flex items-center gap-2">
-          <span className="font-headline text-2xl font-bold tracking-tighter text-blue-600">
-            ARK
-          </span>
-        </Link>
+        <div className="flex items-center gap-4">
+            <Link href="#" className="flex items-center gap-2">
+              <span className="font-headline text-2xl font-bold tracking-tighter text-blue-600">
+                ARK
+              </span>
+            </Link>
+            <div className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
+                <span>|</span>
+                <span>Incubated with</span>
+                {tHubLogo && <Image src={tHubLogo.imageUrl} alt="T-Hub Logo" width={40} height={40} className="object-contain" />}
+            </div>
+        </div>
+
 
         <nav className="hidden md:flex md:gap-6">
           {navLinks.map((link) => (
@@ -41,9 +51,8 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <Button variant="ghost">Learn More</Button>
-          <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
-            Get Started
+          <Button asChild>
+            <Link href="#contact">Get Started</Link>
           </Button>
         </div>
 
@@ -67,6 +76,10 @@ export function Header() {
                     </Button>
                 </SheetTrigger>
               </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 px-2">
+                <span>Incubated with</span>
+                {tHubLogo && <Image src={tHubLogo.imageUrl} alt="T-Hub Logo" width={30} height={30} className="object-contain" />}
+              </div>
               <nav className="flex flex-1 flex-col gap-6 pt-8">
                 {navLinks.map((link) => (
                   <Link
@@ -80,8 +93,9 @@ export function Header() {
                 ))}
               </nav>
               <div className="mt-auto flex flex-col gap-2">
-                <Button variant="outline" size="lg">Learn More</Button>
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">Get Started</Button>
+                <Button size="lg" asChild onClick={() => setIsOpen(false)}>
+                  <Link href="#contact">Get Started</Link>
+                </Button>
               </div>
             </div>
           </SheetContent>
