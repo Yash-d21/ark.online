@@ -1,5 +1,6 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowDown, ShoppingCart, Truck, User, Store, PackageCheck, Smartphone, Search } from "lucide-react";
+import { ArrowDown, ShoppingCart, Truck, User, Store, PackageCheck, Smartphone, Search, ArrowRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const b2bSteps = [
@@ -21,7 +22,7 @@ const b2bSteps = [
     {
         title: "Order Redirected to Retailer",
         description: "The order is redirected to the nearest partner retail store at 0% commission.",
-        icon: <User className="h-10 w-10 text-accent" />,
+        icon: <User className="h-10 w_10 text-accent" />,
     },
     {
         title: "Final Delivery to Customer",
@@ -49,36 +50,38 @@ const b2cSteps = [
 ]
 
 const RoadmapB2B = () => {
+    const renderStep = (step: (typeof b2bSteps)[0]) => (
+        <div className="flex flex-col items-center text-center max-w-xs">
+            <div className="flex items-center justify-center w-24 h-24 rounded-full bg-card border-2 border-primary/50 shadow-lg z-10">
+                {step.icon}
+            </div>
+            <div className="mt-4">
+                <h3 className="font-headline text-lg font-semibold text-foreground">{step.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
+            </div>
+        </div>
+    );
+
     return (
         <div className="flex flex-col items-center justify-center gap-8">
             {/* First Row */}
-            <div className="flex flex-col md:flex-row items-stretch justify-center gap-8">
-                {b2bSteps.slice(0, 3).map((step, index) => (
-                    <div key={index} className="flex flex-col items-center text-center max-w-xs">
-                        <div className="flex items-center justify-center w-24 h-24 rounded-full bg-card border-2 border-primary/50 shadow-lg z-10">
-                            {step.icon}
-                        </div>
-                        <div className="mt-4">
-                            <h3 className="font-headline text-lg font-semibold text-foreground">{step.title}</h3>
-                            <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
-                        </div>
-                    </div>
-                ))}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                {renderStep(b2bSteps[0])}
+                <ArrowRight className="h-8 w-8 text-primary/50 hidden md:block" />
+                {renderStep(b2bSteps[1])}
+                <ArrowRight className="h-8 w-8 text-primary/50 hidden md:block" />
+                {renderStep(b2bSteps[2])}
             </div>
-             <ArrowDown className="h-8 w-8 text-primary/50" />
+
+            <div className="flex justify-end w-full max-w-5xl px-8">
+                 <ArrowDown className="h-8 w-8 text-primary/50 -rotate-45" />
+            </div>
+            
             {/* Second Row */}
-            <div className="flex flex-col md:flex-row items-stretch justify-center gap-8">
-                {b2bSteps.slice(3).map((step, index) => (
-                     <div key={index} className="flex flex-col items-center text-center max-w-xs">
-                        <div className="flex items-center justify-center w-24 h-24 rounded-full bg-card border-2 border-primary/50 shadow-lg z-10">
-                            {step.icon}
-                        </div>
-                        <div className="mt-4">
-                            <h3 className="font-headline text-lg font-semibold text-foreground">{step.title}</h3>
-                            <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
-                        </div>
-                    </div>
-                ))}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                {renderStep(b2bSteps[4])}
+                <ArrowRight className="h-8 w-8 text-primary/50 hidden md:block rotate-180" />
+                {renderStep(b2bSteps[3])}
             </div>
         </div>
     );
