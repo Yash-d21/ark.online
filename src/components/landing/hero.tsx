@@ -21,7 +21,7 @@ export function Hero() {
           </h1>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button size="lg" asChild>
-              <Link href="https://forms.gle/BW2q6X93evCi51Ga9" target="_blank" rel="noopener noreferrer">Learn More</Link>
+              <Link href="#how-it-works">Learn More</Link>
             </Button>
           </div>
         </div>
