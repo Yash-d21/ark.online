@@ -87,7 +87,7 @@ export default function FlowingMenu() {
 
   return (
     <div className="menu-wrap">
-      <nav className="menu" style={{height: '25%', top: '50%', transform: 'translateY(-50%)', position: 'relative'}}>
+      <nav className="menu">
           <MenuItem {...item} />
       </nav>
     </div>
