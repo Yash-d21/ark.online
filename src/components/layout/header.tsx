@@ -24,7 +24,7 @@ export function Header() {
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <div className="flex items-center gap-4">
             <Link href="#" className="flex items-center gap-2">
-              <span className="font-headline text-2xl font-bold tracking-tighter text-blue-600">
+              <span className="font-headline text-2xl font-bold tracking-tighter text-foreground">
                 ARK
               </span>
             </Link>
@@ -65,7 +65,7 @@ export function Header() {
             <div className="flex h-full flex-col">
               <div className="flex items-center justify-between border-b pb-4">
                  <Link href="#" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                    <span className="font-headline text-2xl font-bold tracking-tighter text-blue-600">ARK</span>
+                    <span className="font-headline text-2xl font-bold tracking-tighter text-foreground">ARK</span>
                 </Link>
                 <SheetTrigger asChild>
                     <Button variant="ghost" size="icon">
