@@ -1,5 +1,6 @@
 
 @import './FlowingMenu.css';
+@import './FlowingMenuDemo.css';
 
 @tailwind base;
 @tailwind components;
