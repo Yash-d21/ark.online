@@ -16,9 +16,6 @@ interface FlowingMenuProps {
 
 const demoItems: MenuItemProps[] = [
     { link: '#', text: 'Plywoods', image: 'https://picsum.photos/seed/plywood/600/400' },
-    { link: '#', text: 'Louvers', image: 'https://picsum.photos/seed/louvers/600/400' },
-    { link: '#', text: 'Cement', image: 'https://picsum.photos/seed/cement/600/400' },
-    { link: '#', text: 'And more', image: 'https://picsum.photos/seed/hardware/600/400' }
 ];
 
 const FlowingMenuDemo: React.FC<FlowingMenuProps> = ({ items = demoItems }) => {
