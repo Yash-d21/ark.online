@@ -15,7 +15,7 @@ interface FlowingMenuProps {
 }
 
 const demoItems: MenuItemProps[] = [
-    { link: '#', text: 'Incubated with Tpub', image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png' },
+    { link: '#', text: 'Incubated with T-Hub', image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png' },
 ];
 
 const FlowingMenuDemo: React.FC<FlowingMenuProps> = ({ items = demoItems }) => {
