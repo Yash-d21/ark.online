@@ -15,7 +15,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <InfoSection />
-        <div style={{ height: '600px', position: 'relative', backgroundColor: '#060010' }}>
+        <div style={{ height: '150px', position: 'relative', backgroundColor: '#060010' }}>
             <FlowingMenuDemo />
         </div>
         <HowItWorks />
