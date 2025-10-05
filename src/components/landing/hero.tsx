@@ -16,11 +16,11 @@ export function Hero() {
         />
       </div>
       <div className="container mx-auto max-w-7xl px-4 py-20 md:py-32 lg:py-40">
-        <div className="max-w-4xl">
+        <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl lg:text-7xl">
             Organizing India&apos;s most fragmented hardware and building materials supply chain
           </h1>
-          <div className="mt-10 flex items-center gap-x-6">
+          <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button size="lg" asChild>
               <Link href="#how-it-works">Learn More</Link>
             </Button>
