@@ -13,28 +13,6 @@ interface MenuItemProps {
 interface FlowingMenuProps {
   items?: MenuItemProps[];
 }
-
-const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [] }) => {
-    if (items.length === 0) {
-        // Default item if none are provided
-        items.push({
-            link: '#',
-            text: 'Incubated with T-Hub',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png'
-        });
-    }
-
-  return (
-    <div className="menu-wrap">
-      <nav className="menu">
-        {items.map((item, idx) => (
-          <MenuItem key={idx} {...item} />
-        ))}
-      </nav>
-    </div>
-  );
-};
-
 const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
   const itemRef = React.useRef<HTMLDivElement>(null);
   const marqueeRef = React.useRef<HTMLDivElement>(null);
@@ -108,5 +86,3 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
     </div>
   );
 };
-
-export default FlowingMenu;
