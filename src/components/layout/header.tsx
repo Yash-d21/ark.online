@@ -24,14 +24,14 @@ export function Header() {
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <div className="flex items-center gap-4">
             <Link href="#" className="flex items-center gap-2">
-              <span className="font-headline text-2xl font-bold tracking-tighter text-white">
+              <span className="font-headline text-2xl font-bold tracking-tighter text-foreground">
                 ARK
               </span>
             </Link>
             <div className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
                 <span>|</span>
-                <span>Incubated with</span>
                 <Image src="https://i.ibb.co/3fd2y38/T-Hub-Logo-PNG.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
+                <span>Incubated with T-Hub</span>
             </div>
         </div>
 
@@ -75,8 +75,8 @@ export function Header() {
                 </SheetTrigger>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 px-2">
-                <span>Incubated with</span>
                 <Image src="https://i.ibb.co/3fd2y38/T-Hub-Logo-PNG.png" alt="T-Hub Logo" width={30} height={30} className="object-contain" />
+                <span>Incubated with T-Hub</span>
               </div>
               <nav className="flex flex-1 flex-col gap-6 pt-8">
                 {navLinks.map((link) => (
