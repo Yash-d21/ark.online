@@ -1,30 +1,56 @@
 'use client';
+
 import React from 'react';
 import { gsap } from 'gsap';
 
-type MenuItemProps = {
-    link: string;
-    text: string;
-    image: string;
+interface MenuItemProps {
+  link: string;
+  text: string;
+  image: string;
+}
+
+interface FlowingMenuProps {
+  items?: MenuItemProps[];
+}
+
+const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [] }) => {
+    if (items.length === 0) {
+        // Default item if none are provided
+        items.push({
+            link: '#',
+            text: 'Incubated with T-Hub',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png'
+        });
+    }
+
+  return (
+    <div className="menu-wrap">
+      <nav className="menu">
+        {items.map((item, idx) => (
+          <MenuItem key={idx} {...item} />
+        ))}
+      </nav>
+    </div>
+  );
 };
 
-function MenuItem({ link, text, image }: MenuItemProps) {
+const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
   const itemRef = React.useRef<HTMLDivElement>(null);
   const marqueeRef = React.useRef<HTMLDivElement>(null);
   const marqueeInnerRef = React.useRef<HTMLDivElement>(null);
 
-  const animationDefaults = { duration: 0.6, ease: 'expo' };
+  const animationDefaults: gsap.TweenVars = { duration: 0.6, ease: 'expo' };
 
-  const findClosestEdge = (mouseX: number, mouseY: number, width: number, height: number) => {
-    const topEdgeDist = distMetric(mouseX, mouseY, width / 2, 0);
-    const bottomEdgeDist = distMetric(mouseX, mouseY, width / 2, height);
-    return topEdgeDist < bottomEdgeDist ? 'top' : 'bottom';
-  };
-
-  const distMetric = (x: number, y: number, x2: number, y2: number) => {
+  const distMetric = (x: number, y: number, x2: number, y2: number): number => {
     const xDiff = x - x2;
     const yDiff = y - y2;
     return xDiff * xDiff + yDiff * yDiff;
+  };
+
+  const findClosestEdge = (mouseX: number, mouseY: number, width: number, height: number): 'top' | 'bottom' => {
+    const topEdgeDist = distMetric(mouseX, mouseY, width / 2, 0);
+    const bottomEdgeDist = distMetric(mouseX, mouseY, width / 2, height);
+    return topEdgeDist < bottomEdgeDist ? 'top' : 'bottom';
   };
 
   const handleMouseEnter = (ev: React.MouseEvent<HTMLAnchorElement>) => {
@@ -34,9 +60,9 @@ function MenuItem({ link, text, image }: MenuItemProps) {
     const y = ev.clientY - rect.top;
     const edge = findClosestEdge(x, y, rect.width, rect.height);
 
-    gsap
-      .timeline({ defaults: animationDefaults })
-      .set(marqueeRef.current, { y: edge === 'top' ? '-101%' : '101%' }, 0)
+    const tl = gsap.timeline({ defaults: animationDefaults });
+
+    tl.set(marqueeRef.current, { y: edge === 'top' ? '-101%' : '101%' }, 0)
       .set(marqueeInnerRef.current, { y: edge === 'top' ? '101%' : '-101%' }, 0)
       .to([marqueeRef.current, marqueeInnerRef.current], { y: '0%' }, 0);
   };
@@ -48,18 +74,23 @@ function MenuItem({ link, text, image }: MenuItemProps) {
     const y = ev.clientY - rect.top;
     const edge = findClosestEdge(x, y, rect.width, rect.height);
 
-    gsap
-      .timeline({ defaults: animationDefaults })
-      .to(marqueeRef.current, { y: edge === 'top' ? '-101%' : '101%' }, 0)
-      .to(marqueeInnerRef.current, { y: edge === 'top' ? '101%' : '-101%' }, 0);
+    const tl = gsap.timeline({ defaults: animationDefaults });
+
+    tl.to(marqueeRef.current, { y: edge === 'top' ? '-101%' : '101%' }, 0).to(
+      marqueeInnerRef.current,
+      { y: edge === 'top' ? '101%' : '-101%' },
+      0
+    );
   };
 
-  const repeatedMarqueeContent = Array.from({ length: 4 }).map((_, idx) => (
-    <React.Fragment key={idx}>
-      <span>{text}</span>
-      <div className="marquee__img" style={{ backgroundImage: `url(${image})` }} />
-    </React.Fragment>
-  ));
+  const repeatedMarqueeContent = React.useMemo(() => {
+    return Array.from({ length: 4 }).map((_, idx) => (
+      <React.Fragment key={idx}>
+        <span>{text}</span>
+        <div className="marquee__img" style={{ backgroundImage: `url(${image})` }} />
+      </React.Fragment>
+    ));
+  }, [text, image]);
 
   return (
     <div className="menu__item" ref={itemRef}>
@@ -75,21 +106,6 @@ function MenuItem({ link, text, image }: MenuItemProps) {
       </div>
     </div>
   );
-}
+};
 
-
-export default function FlowingMenu() {
-  const item = {
-    link: '#',
-    text: 'Incubated with T-Hub',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png'
-  };
-
-  return (
-    <div className="menu-wrap">
-      <nav className="menu">
-          <MenuItem {...item} />
-      </nav>
-    </div>
-  );
-}
+export default FlowingMenu;
