@@ -81,7 +81,7 @@ function MenuItem({ link, text, image }: MenuItemProps) {
 export default function FlowingMenu() {
   const item = {
     link: '#',
-    text: 'Incubated with',
+    text: 'Incubated with T-Hub',
     image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png'
   };
 
