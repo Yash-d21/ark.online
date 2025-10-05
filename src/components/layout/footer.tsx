@@ -11,7 +11,7 @@ export function Footer() {
           </Link>
            <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="hidden md:inline">|</span>
-                <Image src="https://i.ibb.co/3fd2y38/T-Hub-Logo-PNG.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
                 <span>Incubated with T-Hub</span>
             </div>
         </div>
