@@ -6,7 +6,6 @@ import { HowItWorks } from "@/components/landing/how-it-works";
 import { WhyArk } from "@/components/landing/why-ark";
 import { CtaSection } from "@/components/landing/cta-section";
 import { MissionVision } from "@/components/landing/mission-vision";
-import FlowingMenuDemo from "@/components/landing/FlowingMenuDemo";
 
 export default function Home() {
   return (
