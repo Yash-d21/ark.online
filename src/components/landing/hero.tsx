@@ -5,7 +5,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="home" className="relative w-full min-h-screen isolate bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen isolate bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden pt-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 h-full w-full">
         <Image
@@ -23,28 +23,28 @@ export function Hero() {
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-24 md:py-32 flex items-center min-h-screen relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-16 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
           {/* Text content - always first on mobile */}
-          <div className="text-center lg:text-left space-y-6 order-1 lg:order-1">
-            <div className="space-y-4">
-              <h1 className="font-headline text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <div className="text-center lg:text-left space-y-4 order-1 lg:order-1 lg:-mt-8">
+            <div className="space-y-3">
+              <h1 className="font-headline text-xl font-extrabold tracking-tight text-white sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
                 Organizing India&apos;s most fragmented hardware and building materials supply chain
               </h1>
-              <p className="text-base text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-sm text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Connecting retailers, suppliers, and customers through innovative technology. 
                 Transform chaos into clarity with ARK's comprehensive platform.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Button size="lg" className="bg-blue-600/90 hover:bg-blue-700 text-white shadow-2xl hover:shadow-blue-500/50 backdrop-blur-md border border-blue-400/50 transition-all duration-300 font-bold text-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]" asChild>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+              <Button size="lg" className="bg-blue-600/90 hover:bg-blue-700 text-white shadow-2xl hover:shadow-blue-500/50 backdrop-blur-md border border-blue-400/50 transition-all duration-300 font-bold text-base hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]" asChild>
                 <Link href="#how-it-works" className="flex items-center gap-2">
                   Get Started
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="ghost" className="bg-transparent border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 hover:text-white backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 font-medium" asChild>
+              <Button size="lg" variant="ghost" className="bg-transparent border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 hover:text-white backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 font-medium text-sm" asChild>
                 <Link href="#mission" className="flex items-center gap-2">
                   <Play className="h-4 w-4" />
                   Learn More
@@ -55,62 +55,55 @@ export function Hero() {
           </div>
           
           {/* Images - always after text on mobile */}
-          <div className="space-y-8 order-2 lg:order-2">
-            <div className="relative translate-y-8 mb-20 md:mb-16 lg:translate-x-4">
-              <div className="grid grid-cols-2 gap-2 sm:gap-4 h-[300px]">
+          <div className="order-2 lg:order-2 mt-8 lg:mt-0 mb-32 lg:mb-16">
+            <div className="relative lg:translate-x-4">
+              <div className="grid grid-cols-2 gap-2 sm:gap-4 max-w-sm mx-auto lg:mx-0 lg:ml-16 lg:max-w-md">
                 {/* Top-left image */}
-                <div className="relative rounded-xl overflow-hidden shadow-2xl group">
-                  <Image
-                    src="/images/1.jpg"
-                    alt="Modern hardware store with digital inventory management"
-                    fill
-                    className="object-cover transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-3 left-3 text-white">
-                    <div className="text-xs font-semibold">Smart Inventory</div>
-                    <div className="text-[10px] opacity-90">Digital Management</div>
+                <div className="relative">
+                  <div className="relative rounded-xl overflow-hidden shadow-2xl group aspect-square">
+                    <Image
+                      src="/images/3.png"
+                      alt="Modern hardware store with digital inventory management"
+                      fill
+                      className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -top-2 left-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-3 py-1">
+                    <p className="text-white text-xs font-medium">Lowest wholesale price</p>
                   </div>
                 </div>
                 
                 {/* Top-right image */}
-                <div className="relative rounded-xl overflow-hidden shadow-2xl group">
-                  <Image
-                    src="/images/2.jpg"
-                    alt="Business analytics dashboard showing supply chain data"
-                    fill
-                    className="object-cover transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-3 left-3 text-white">
-                    <div className="text-xs font-semibold">Smart Analytics</div>
-                    <div className="text-[10px] opacity-90">Data-Driven Insights</div>
+                <div className="relative">
+                  <div className="relative rounded-xl overflow-hidden shadow-2xl group aspect-square">
+                    <Image
+                      src="/images/2.jpg"
+                      alt="Business analytics dashboard showing supply chain data"
+                      fill
+                      className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -top-2 right-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-3 py-1">
+                    <p className="text-white text-xs font-medium">Lowest prices, highest quality!</p>
                   </div>
                 </div>
                 
-                {/* Bottom images spanning full width */}
-                <div className="relative rounded-xl overflow-hidden shadow-2xl group col-span-2">
-                  <Image
-                    src="/images/3.jpg"
-                    alt="Construction materials and hardware delivery truck"
-                    fill
-                    className="object-cover transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-3 left-3 text-white">
-                    <div className="text-xs font-semibold">Fast Delivery</div>
-                    <div className="text-[10px] opacity-90">Same Day Service</div>
+                {/* Bottom image spanning full width */}
+                <div className="relative col-span-2">
+                  <div className="relative rounded-xl overflow-hidden shadow-2xl group aspect-video">
+                    <Image
+                      src="/images/1.jpg"
+                      alt="Construction materials and hardware delivery truck"
+                      fill
+                      className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2 right-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-4 py-1">
+                    <p className="text-white text-sm font-medium">0% commission</p>
                   </div>
                 </div>
               </div>
               
-              {/* Floating Cards */}
-              <div className="absolute -top-2 left-2 lg:-left-4 bg-white/20 backdrop-blur-lg rounded-xl p-3 lg:p-4 border border-white/30 shadow-2xl">
-                <div className="text-white text-xs font-semibold">Real-time Tracking</div>
-              </div>
-              <div className="absolute -bottom-2 right-2 lg:-right-4 bg-white/20 backdrop-blur-lg rounded-xl p-3 lg:p-4 border border-white/30 shadow-2xl">
-                <div className="text-white text-xs font-semibold">24/7 Support</div>
-              </div>
             </div>
             
           </div>
