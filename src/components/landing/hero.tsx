@@ -9,10 +9,10 @@ export function Hero() {
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 h-full w-full">
         <Image
-          src="/images/hardware.png"
+          src="/images/hardware.jpg"
           alt="Hardware tools and equipment background"
           fill
-          className="object-cover opacity-100"
+          className="object-cover opacity-100 scale-60 translate-y-100"
           data-ai-hint="hardware tools and equipment"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/85 to-slate-900/90"></div>
@@ -55,7 +55,7 @@ export function Hero() {
           </div>
           
           {/* Images - always after text on mobile */}
-          <div className="space-y-8 order-2 lg:order-2 overflow-hidden">
+          <div className="space-y-8 order-2 lg:order-2">
             <div className="relative translate-y-8 mb-20 md:mb-16 lg:translate-x-4">
               <div className="grid grid-cols-2 gap-2 sm:gap-4 h-[300px]">
                 {/* Top-left image */}

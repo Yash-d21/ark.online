@@ -9,11 +9,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#how-it-works", label: "How it Works" },
-  { href: "#why-ark", label: "Why ARK" },
-  { href: "#mission", label: "Mission" },
-  { href: "#contact", label: "Contact" },
+  { href: "#home", label: "HOME" },
+  { href: "#how-it-works", label: "HOW IT WORKS" },
+  { href: "#why-ark", label: "WHY ARK" },
+  { href: "#mission", label: "MISSION" },
+  { href: "#contact", label: "CONTACT" },
 ];
 
 export function Header() {
