@@ -5,7 +5,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="home" className="relative w-full h-screen isolate bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden pt-16">
+    <section id="home" className="relative w-full min-h-screen isolate bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 h-full w-full">
         <Image
@@ -23,10 +23,10 @@ export function Hero() {
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       
-      <div className="container mx-auto max-w-7xl px-4 h-full flex items-center -mt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="text-center lg:text-left space-y-6">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-24 md:py-32 flex items-center min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+          {/* Text content - always first on mobile */}
+          <div className="text-center lg:text-left space-y-6 order-1 lg:order-1">
             <div className="space-y-4">
               <h1 className="font-headline text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Organizing India&apos;s most fragmented hardware and building materials supply chain
@@ -54,10 +54,10 @@ export function Hero() {
             
           </div>
           
-          {/* Right side - Enhanced Images */}
-          <div className="space-y-8">
-            <div className="relative translate-x-4 translate-y-8">
-              <div className="grid grid-cols-2 gap-4 h-[350px]">
+          {/* Images - always after text on mobile */}
+          <div className="space-y-8 order-2 lg:order-2 overflow-hidden">
+            <div className="relative translate-y-8 mb-20 md:mb-16 lg:translate-x-4">
+              <div className="grid grid-cols-2 gap-2 sm:gap-4 h-[300px]">
                 {/* Top-left image */}
                 <div className="relative rounded-xl overflow-hidden shadow-2xl group">
                   <Image
@@ -105,10 +105,10 @@ export function Hero() {
               </div>
               
               {/* Floating Cards */}
-              <div className="absolute -top-4 -left-4 bg-white/20 backdrop-blur-lg rounded-xl p-4 border border-white/30 shadow-2xl">
+              <div className="absolute -top-2 left-2 lg:-left-4 bg-white/20 backdrop-blur-lg rounded-xl p-3 lg:p-4 border border-white/30 shadow-2xl">
                 <div className="text-white text-xs font-semibold">Real-time Tracking</div>
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white/20 backdrop-blur-lg rounded-xl p-4 border border-white/30 shadow-2xl">
+              <div className="absolute -bottom-2 right-2 lg:-right-4 bg-white/20 backdrop-blur-lg rounded-xl p-3 lg:p-4 border border-white/30 shadow-2xl">
                 <div className="text-white text-xs font-semibold">24/7 Support</div>
               </div>
             </div>
@@ -118,7 +118,7 @@ export function Hero() {
       </div>
       
       {/* Full-width Glassmorphism Banner - positioned at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 w-full px-4 pb-4">
+      <div className="absolute bottom-0 left-0 right-0 w-full px-4 pb-6 z-10">
         <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-3 px-6 shadow-2xl">
           <div className="flex items-center justify-center space-x-4">
             <div className="text-white text-sm font-medium">Incubated with</div>
