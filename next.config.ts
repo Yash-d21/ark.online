@@ -8,10 +8,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    // Enable stable features
-    serverComponentsExternalPackages: [],
-  },
+  serverExternalPackages: [],
   turbopack: {
     rules: {
       '*.svg': {
