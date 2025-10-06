@@ -19,7 +19,7 @@ export function Footer() {
             </Link>
             <div className="flex items-center gap-2 mb-4">
               <p className="text-gray-400 text-sm">
-                Incubated by
+                Incubated with
               </p>
               <Image 
                 src="/images/t-hub-logo-1-1.png" 

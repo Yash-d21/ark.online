@@ -15,7 +15,7 @@ interface FlowingMenuProps {
 }
 
 const demoItems: MenuItemProps[] = [
-    { link: '#', text: 'Incubated with T-Hub', image: 'https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png' },
+    { link: '#', text: 'Incubated with T-Hub', image: '/images/t-hub-logo-1-1.png' },
 ];
 
 const FlowingMenuDemo: React.FC<FlowingMenuProps> = ({ items = demoItems }) => {
@@ -91,7 +91,14 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
   return (
     <div className="menu__item-demo" ref={itemRef}>
       <a className="menu__item-link-demo" href={link} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        {text}
+        <div className="flex items-center gap-3">
+          <span>{text}</span>
+          <img 
+            src="/images/t-hub-logo-1-1.png" 
+            alt="T-Hub Logo" 
+            className="h-6 w-auto opacity-80"
+          />
+        </div>
       </a>
       <div className="marquee-demo" ref={marqueeRef}>
         <div className="marquee__inner-wrap-demo" ref={marqueeInnerRef}>

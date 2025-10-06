@@ -18,9 +18,24 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-900/95 backdrop-blur-lg shadow-2xl">
+    <header className={`fixed top-0 z-[9999] w-full border-b border-gray-700 backdrop-blur-lg shadow-2xl transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-gray-800/70 border-gray-600/50' 
+        : 'bg-gray-800/95 border-gray-700'
+    }`}>
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <div className="flex items-center gap-4">
             <Link href="#" className="flex items-center gap-2 group">
@@ -28,10 +43,10 @@ export function Header() {
                 ARK
               </span>
             </Link>
-            <div className="hidden md:flex items-center gap-2 text-sm text-gray-300">
-                <span className="text-gray-500">|</span>
-                <Image src="https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png" alt="T-Hub Logo" width={24} height={24} className="object-contain" />
-                <span className="text-gray-300">Incubated with T-Hub</span>
+            <div className="hidden md:flex items-center gap-2 text-sm text-white">
+                <span className="text-white">|</span>
+                <Image src="/images/t-hub-logo-1-1.png" alt="T-Hub Logo" width={40} height={40} className="object-contain" />
+                <span className="text-white">Incubated with T-Hub</span>
             </div>
         </div>
 
@@ -40,7 +55,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-gray-300 transition-colors hover:text-white hover:scale-105 duration-300"
+              className="text-sm font-medium text-white transition-colors hover:text-blue-400 hover:scale-105 duration-300"
             >
               {link.label}
             </Link>
@@ -60,9 +75,13 @@ export function Header() {
               <span className="sr-only">Toggle Menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-gray-900/95 backdrop-blur-lg border-l border-gray-800">
+          <SheetContent side="right" className={`w-[300px] sm:w-[400px] backdrop-blur-lg border-l transition-all duration-300 ${
+            isScrolled 
+              ? 'bg-gray-800/70 border-gray-600/50' 
+              : 'bg-gray-800/95 border-gray-700'
+          }`}>
             <div className="flex h-full flex-col">
-              <div className="flex items-center justify-between border-b border-gray-800 pb-4">
+              <div className="flex items-center justify-between border-b border-gray-700 pb-4">
                  <Link href="#" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
                     <span className="font-headline text-2xl font-bold tracking-tighter text-white">ARK</span>
                 </Link>
@@ -73,16 +92,16 @@ export function Header() {
                     </Button>
                 </SheetTrigger>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-300 mt-4 px-2">
-                <Image src="https://upload.wikimedia.org/wikipedia/commons/4/40/T-Hub_Logo-PNG.png" alt="T-Hub Logo" width={20} height={20} className="object-contain" />
-                <span className="text-gray-300">Incubated with T-Hub</span>
+              <div className="flex items-center gap-2 text-sm text-white mt-4 px-2">
+                <Image src="/images/t-hub-logo-1-1.png" alt="T-Hub Logo" width={32} height={32} className="object-contain" />
+                <span className="text-white">Incubated with T-Hub</span>
               </div>
               <nav className="flex flex-1 flex-col gap-6 pt-8">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium text-gray-300 transition-colors hover:text-white hover:translate-x-2 duration-300"
+                    className="text-lg font-medium text-white transition-colors hover:text-blue-400 hover:translate-x-2 duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

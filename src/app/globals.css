@@ -1,6 +1,5 @@
 
 @import './FlowingMenu.css';
-@import './FlowingMenuDemo.css';
 
 @tailwind base;
 @tailwind components;
@@ -66,21 +65,35 @@
     overflow-x: hidden;
   }
   
-  /* Enhanced scrollbar styling */
+  /* Dark-themed scrollbar styling */
   ::-webkit-scrollbar {
     width: 8px;
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-muted;
+    background: #1e293b; /* slate-800 */
+    border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/30 rounded-full;
+    background: #475569; /* slate-600 */
+    border-radius: 4px;
+    border: 1px solid #334155; /* slate-700 */
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/50;
+    background: #64748b; /* slate-500 */
+    border: 1px solid #475569; /* slate-600 */
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background: #94a3b8; /* slate-400 */
+  }
+  
+  /* Firefox scrollbar styling */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #1e293b; /* thumb track */
   }
   
   /* Smooth transitions for better UX */

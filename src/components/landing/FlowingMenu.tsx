@@ -74,7 +74,14 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
   return (
     <div className="menu__item" ref={itemRef}>
       <a className="menu__item-link" href={link} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        {text}
+        <div className="flex items-center gap-3">
+          <span>{text}</span>
+          <img 
+            src="/images/t-hub-logo-1-1.png" 
+            alt="T-Hub Logo" 
+            className="h-6 w-auto opacity-80"
+          />
+        </div>
       </a>
       <div className="marquee" ref={marqueeRef}>
         <div className="marquee__inner-wrap">
