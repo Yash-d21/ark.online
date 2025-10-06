@@ -26,12 +26,12 @@ export function Hero() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
           {/* Text content - always first on mobile */}
-          <div className="text-center lg:text-left space-y-4 order-1 lg:order-1 lg:-mt-8">
+          <div className="text-center lg:text-left space-y-4 order-1 lg:order-1 lg:-mt-16">
             <div className="space-y-3">
-              <h1 className="font-headline text-xl font-extrabold tracking-tight text-white sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
+              <h1 className="font-headline text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Organizing India&apos;s most fragmented hardware and building materials supply chain
               </h1>
-              <p className="text-sm text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-base text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Connecting retailers, suppliers, and customers through innovative technology. 
                 Transform chaos into clarity with ARK's comprehensive platform.
               </p>
