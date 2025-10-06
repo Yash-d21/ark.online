@@ -50,12 +50,12 @@ export function Header() {
             </div>
         </div>
 
-        <nav className="hidden md:flex md:gap-6">
+        <nav className="hidden md:flex md:gap-8 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white transition-colors hover:text-blue-400 hover:scale-105 duration-300"
+              className="text-base font-semibold text-white transition-colors hover:text-blue-400 hover:scale-105 duration-300 tracking-wide"
             >
               {link.label}
             </Link>
@@ -101,7 +101,7 @@ export function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium text-white transition-colors hover:text-blue-400 hover:translate-x-2 duration-300"
+                    className="text-xl font-semibold text-white transition-colors hover:text-blue-400 hover:translate-x-2 duration-300 tracking-wide"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

@@ -6,8 +6,6 @@ import { HowItWorks } from "@/components/landing/how-it-works";
 import { WhyArk } from "@/components/landing/why-ark";
 import { CtaSection } from "@/components/landing/cta-section";
 import { MissionVision } from "@/components/landing/mission-vision";
-import AnimatedContent from "@/components/ui/AnimatedContent";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,81 +13,11 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={false}
-          duration={0.6}
-          ease="power3.out"
-          initialOpacity={0.2}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-          delay={0.1}
-        >
-          <InfoSection />
-        </AnimatedContent>
-        
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={true}
-          duration={0.6}
-          ease="power3.out"
-          initialOpacity={0.2}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-          delay={0.1}
-        >
-          <HowItWorks />
-        </AnimatedContent>
-        
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={false}
-          duration={0.6}
-          ease="power3.out"
-          initialOpacity={0.2}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-          delay={0.1}
-        >
-          <WhyArk />
-        </AnimatedContent>
-        
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={true}
-          duration={0.6}
-          ease="power3.out"
-          initialOpacity={0.2}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-          delay={0.1}
-        >
-          <CtaSection />
-        </AnimatedContent>
-        
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={false}
-          duration={0.6}
-          ease="power3.out"
-          initialOpacity={0.2}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-          delay={0.1}
-        >
-          <MissionVision />
-        </AnimatedContent>
+        <InfoSection />
+        <HowItWorks />
+        <WhyArk />
+        <CtaSection />
+        <MissionVision />
       </main>
       <Footer />
     </div>

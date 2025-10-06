@@ -23,7 +23,7 @@ export function Hero() {
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-24 md:py-32 flex items-center min-h-screen">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-24 md:py-32 flex items-center min-h-screen relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Text content - always first on mobile */}
           <div className="text-center lg:text-left space-y-6 order-1 lg:order-1">
@@ -32,13 +32,13 @@ export function Hero() {
                 Organizing India&apos;s most fragmented hardware and building materials supply chain
               </h1>
               <p className="text-base text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Connect retailers, suppliers, and customers through innovative technology. 
+                Connecting retailers, suppliers, and customers through innovative technology. 
                 Transform chaos into clarity with ARK's comprehensive platform.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Button size="lg" className="bg-blue-600/90 hover:bg-blue-700 text-white shadow-2xl hover:shadow-blue-500/50 backdrop-blur-md border border-blue-400/50 transition-all duration-300 font-bold text-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:scale-105" asChild>
+              <Button size="lg" className="bg-blue-600/90 hover:bg-blue-700 text-white shadow-2xl hover:shadow-blue-500/50 backdrop-blur-md border border-blue-400/50 transition-all duration-300 font-bold text-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]" asChild>
                 <Link href="#how-it-works" className="flex items-center gap-2">
                   Get Started
                   <ArrowRight className="h-4 w-4" />
@@ -61,10 +61,10 @@ export function Hero() {
                 {/* Top-left image */}
                 <div className="relative rounded-xl overflow-hidden shadow-2xl group">
                   <Image
-                    src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop&crop=center"
+                    src="/images/1.jpg"
                     alt="Modern hardware store with digital inventory management"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-3 left-3 text-white">
@@ -76,10 +76,10 @@ export function Hero() {
                 {/* Top-right image */}
                 <div className="relative rounded-xl overflow-hidden shadow-2xl group">
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center"
+                    src="/images/2.jpg"
                     alt="Business analytics dashboard showing supply chain data"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-3 left-3 text-white">
@@ -91,10 +91,10 @@ export function Hero() {
                 {/* Bottom images spanning full width */}
                 <div className="relative rounded-xl overflow-hidden shadow-2xl group col-span-2">
                   <Image
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=200&fit=crop&crop=center"
+                    src="/images/3.jpg"
                     alt="Construction materials and hardware delivery truck"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-3 left-3 text-white">
@@ -121,13 +121,13 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 w-full px-4 pb-6 z-10">
         <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-3 px-6 shadow-2xl">
           <div className="flex items-center justify-center space-x-4">
-            <div className="text-white text-sm font-medium">Incubated with</div>
+            <div className="text-white text-2xl font-bold uppercase tracking-wide">INCUBATED WITH</div>
             <div className="flex items-center">
               <Image
                 src="/images/t-hub-logo-1-1.png"
                 alt="T-Hub Logo"
-                width={60}
-                height={24}
+                width={80}
+                height={32}
                 className="object-contain"
               />
             </div>

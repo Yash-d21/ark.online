@@ -165,7 +165,7 @@ export function HowItWorks() {
                         How ARK Works
                     </h2>
                     <p className="mt-6 text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                        A streamlined process designed for efficiency and growth
+                        You GROW, We GROW
                     </p>
                 </div>
                 

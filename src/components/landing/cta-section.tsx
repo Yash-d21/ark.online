@@ -41,8 +41,8 @@ export function CtaSection() {
                                     <div className="text-xs text-slate-200">Commission</div>
                                 </div>
                                 <div className="p-3 rounded-2xl bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-                                    <div className="text-lg font-bold text-white">Same Day</div>
-                                    <div className="text-xs text-slate-200">Delivery</div>
+                                    <div className="text-lg font-bold text-white">Lowest</div>
+                                    <div className="text-xs text-slate-200">Wholesale Price</div>
                                 </div>
                             </div>
                             <Button size="lg" className="w-full bg-blue-600/80 hover:bg-blue-700/90 text-white shadow-2xl hover:shadow-3xl backdrop-blur-md border border-blue-500/30 transition-all duration-300" asChild>
