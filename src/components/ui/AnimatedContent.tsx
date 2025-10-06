@@ -48,13 +48,15 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
     gsap.set(el, {
       [axis]: offset,
       scale,
-      opacity: animateOpacity ? initialOpacity : 1
+      opacity: animateOpacity ? initialOpacity : 1,
+      visibility: 'hidden'
     });
 
     gsap.to(el, {
       [axis]: 0,
       scale: 1,
       opacity: 1,
+      visibility: 'visible',
       duration,
       ease,
       delay,
