@@ -56,52 +56,67 @@ export function Hero() {
           
           {/* Images - diagonal triangle layout */}
           <div className="order-2 lg:order-2 mt-8 lg:mt-12 mb-12 lg:mb-6">
-            <div className="relative w-full max-w-sm mx-auto lg:mx-0 lg:ml-auto lg:mr-16">
+            <div className="relative w-full max-w-sm mx-auto lg:mx-0 lg:ml-0 lg:mr-8">
               <div className="grid grid-cols-2 gap-2 lg:gap-3">
                 
                 {/* Left column - two vertically stacked images */}
                 <div className="flex flex-col gap-2 lg:gap-3">
                   {/* Top image */}
-                  <div className="relative w-36 h-36 lg:w-44 lg:h-44">
-                    <div className="relative h-full rounded-xl overflow-hidden shadow-lg group transform transition-transform duration-300 hover:scale-[1.02]">
+                  <div className="relative w-44 h-36 lg:w-52 lg:h-44">
+                    <div className="relative h-full rounded-3xl overflow-visible shadow-lg group transform transition-transform duration-300 hover:scale-[1.02]">
                       <Image
                         src="/images/3.png"
                         alt="Modern hardware store with digital inventory management"
                         fill
-                        sizes="(max-width: 768px) 144px, 176px"
-                        className="object-cover object-center bg-slate-800/50"
+                        sizes="(max-width: 768px) 176px, 208px"
+                        className="object-cover object-center bg-slate-800/50 rounded-3xl"
                         priority
                       />
                       <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
+                      
+                      {/* Growth text box - top right corner, half extending out */}
+                      <div className="absolute -top-3 -right-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-3 py-2 shadow-lg">
+                        <span className="text-white text-xs font-semibold tracking-wide">Growth</span>
+                      </div>
                     </div>
                   </div>
                   
                   {/* Bottom image */}
-                  <div className="relative w-36 h-36 lg:w-44 lg:h-44">
-                    <div className="relative h-full rounded-xl overflow-hidden shadow-lg group transform transition-transform duration-300 hover:scale-[1.02]">
+                  <div className="relative w-44 h-36 lg:w-52 lg:h-44">
+                    <div className="relative h-full rounded-3xl overflow-visible shadow-lg group transform transition-transform duration-300 hover:scale-[1.02]">
                       <Image
                         src="/images/2.jpg"
                         alt="Business analytics dashboard showing supply chain data"
                         fill
-                        sizes="(max-width: 768px) 144px, 176px"
-                        className="object-cover object-center bg-slate-800/50"
+                        sizes="(max-width: 768px) 176px, 208px"
+                        className="object-cover object-center bg-slate-800/50 rounded-3xl"
                       />
                       <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
+                      
+                      {/* Convenience text box - bottom left corner, half extending out */}
+                      <div className="absolute -bottom-3 -left-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-3 py-2 shadow-lg">
+                        <span className="text-white text-xs font-semibold tracking-wide">Convenience</span>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Right side - single centered image */}
-                <div className="relative w-44 h-48 lg:w-52 lg:h-60 mt-6">
-                  <div className="relative h-full rounded-xl overflow-hidden shadow-lg group transform transition-transform duration-300 hover:scale-[1.02]">
-                    <Image
-                      src="/images/1.jpg"
-                      alt="Construction materials and hardware delivery truck"
-                      fill
-                      sizes="(max-width: 768px) 176px, 208px"
-                      className="object-cover object-center bg-slate-800/50"
-                    />
+                <div className="relative w-56 h-52 lg:w-64 lg:h-64 mt-6 ml-4 lg:ml-8">
+                  <div className="relative h-full rounded-xl overflow-visible shadow-lg group transform transition-transform duration-300 hover:scale-[1.02]">
+                      <Image
+                        src="/images/1.jpg"
+                        alt="Construction materials and hardware delivery truck"
+                        fill
+                        sizes="(max-width: 768px) 224px, 256px"
+                        className="object-cover object-center bg-slate-800/50 rounded-3xl"
+                      />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
+                    
+                    {/* Trust text box - top right corner, half extending out */}
+                    <div className="absolute -top-3 -right-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-3 py-2 shadow-lg">
+                      <span className="text-white text-xs font-semibold tracking-wide">Trust</span>
+                    </div>
                   </div>
                 </div>
               </div>
